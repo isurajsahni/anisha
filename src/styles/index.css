@@ -1,0 +1,22 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg: #0a0a0a;
+  --accent: #FF8C00;
+}
+
+html, body, #root {
+  height: 100%;
+}
+
+body {
+  @apply bg-deep text-neutral-200 font-sans;
+}
+
+.accent-ring {
+  box-shadow: 0 0 0 2px rgba(255, 140, 0, 0.6);
+}
+
+

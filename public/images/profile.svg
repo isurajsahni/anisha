@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1024" height="1024" viewBox="0 0 1024 1024">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#FF8C00"/>
+      <stop offset="1" stop-color="#cc6f00"/>
+    </linearGradient>
+    <clipPath id="c">
+      <rect width="1024" height="1024" rx="48" ry="48"/>
+    </clipPath>
+  </defs>
+  <rect width="1024" height="1024" fill="#0a0a0a"/>
+  <g clip-path="url(#c)">
+    <circle cx="512" cy="420" r="220" fill="url(#g)" opacity="0.25"/>
+    <circle cx="512" cy="420" r="180" fill="none" stroke="#FF8C00" stroke-opacity="0.5" stroke-width="12"/>
+    <circle cx="512" cy="420" r="96" fill="none" stroke="#FF8C00" stroke-opacity="0.9" stroke-width="6"/>
+    <rect x="240" y="620" width="544" height="280" rx="140" fill="url(#g)" opacity="0.2"/>
+    <rect x="240" y="620" width="544" height="280" rx="140" fill="none" stroke="#FF8C00" stroke-opacity="0.5" stroke-width="10"/>
+  </g>
+  <text x="512" y="810" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="120" font-weight="700" fill="#ffffff">Anisha</text>
+</svg>
+
+
