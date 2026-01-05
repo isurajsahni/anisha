@@ -1,6 +1,7 @@
 import { Section } from './Section'
 import { motion } from 'framer-motion'
 import openmicImg from '../img/openmic.png'
+import { useLightbox } from './Lightbox'
 
 type Project = {
   title: string
@@ -36,6 +37,7 @@ const projects: Project[] = [
  * @returns {JSX.Element}
  */
 export function Projects(): JSX.Element {
+  const { open } = useLightbox()
   return (
     <Section id="projects" subtitle="Projects" title="Selected work and outcomes">
       <div className="grid md:grid-cols-3 gap-4">
@@ -53,7 +55,16 @@ export function Projects(): JSX.Element {
           >
             {p.imgSrc && (
               <div className="aspect-[16/9] overflow-hidden rounded-t-xl border-b border-white/10">
-                <img src={p.imgSrc} alt={p.title} className="w-full h-full object-cover" loading="lazy" />
+                <img
+                  src={p.imgSrc}
+                  alt={p.title}
+                  className="w-full h-full object-cover cursor-zoom-in"
+                  loading="lazy"
+                  onClick={(e) => {
+                    e.preventDefault()
+                    open({ src: p.imgSrc!, alt: p.title })
+                  }}
+                />
               </div>
             )}
             <div className="p-5">

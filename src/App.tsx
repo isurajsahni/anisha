@@ -8,6 +8,7 @@ import { About } from './components/About'
 import { Samples } from './components/Samples'
 import { Certificates } from './components/Certificates'
 import { Education } from './components/Education'
+import { LightboxProvider } from './components/Lightbox'
 
 /**
  * The root app composing all portfolio sections.
@@ -15,7 +16,8 @@ import { Education } from './components/Education'
  */
 export default function App(): JSX.Element {
   return (
-    <div className="min-h-screen">
+    <LightboxProvider>
+      <div className="min-h-screen">
       <header className="sticky top-0 z-40 backdrop-blur supports-[backdrop-filter]:bg-deep/70 border-b border-white/5">
         <div className="mx-auto max-w-6xl px-4 py-3 flex items-center justify-between">
           <a href="#" className="font-semibold tracking-tight text-white">Anisha Kumari</a>
@@ -44,7 +46,8 @@ export default function App(): JSX.Element {
         <Testimonials />
       </main>
       <Footer />
-    </div>
+      </div>
+    </LightboxProvider>
   )
 }
 

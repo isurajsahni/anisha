@@ -1,10 +1,12 @@
 import { motion } from 'framer-motion'
+import { useLightbox } from './Lightbox'
 
 /**
  * Hero section with headline and key stats.
  * @returns {JSX.Element}
  */
 export function Hero(): JSX.Element {
+  const { open } = useLightbox()
   return (
     <section className="relative overflow-hidden">
       <div className="absolute inset-0 pointer-events-none">
@@ -64,8 +66,9 @@ export function Hero(): JSX.Element {
             <img
               src="/images/profile.svg"
               alt="Anisha Kumari"
-              className="w-full h-full object-cover"
+              className="w-full h-full object-cover cursor-zoom-in"
               loading="eager"
+              onClick={() => open({ src: '/images/profile.svg', alt: 'Anisha Kumari' })}
             />
             <div className="absolute inset-0 ring-1 ring-white/10 rounded-2xl pointer-events-none"></div>
           </div>

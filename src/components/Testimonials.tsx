@@ -1,11 +1,13 @@
 import { Section } from './Section'
 import recommendation from '../img/recomendation letter.png'
+import { useLightbox } from './Lightbox'
 
 /**
  * Testimonials section with highlighted recommendation.
  * @returns {JSX.Element}
  */
 export function Testimonials(): JSX.Element {
+  const { open } = useLightbox()
   return (
     <Section id="testimonials" subtitle="Testimonials" title="What people say">
       <div className="grid md:grid-cols-2 gap-4">
@@ -21,7 +23,13 @@ export function Testimonials(): JSX.Element {
         </figure>
         <figure className="rounded-xl border border-white/10 bg-white/5 p-4">
           <div className="aspect-[4/3] overflow-hidden rounded-lg border border-white/10">
-            <img src={recommendation} alt="Recommendation Letter — Attack Capital" className="w-full h-full object-cover" loading="lazy" />
+            <img
+              src={recommendation}
+              alt="Recommendation Letter — Attack Capital"
+              className="w-full h-full object-cover cursor-zoom-in"
+              loading="lazy"
+              onClick={() => open({ src: recommendation, alt: 'Recommendation Letter — Attack Capital' })}
+            />
           </div>
           <figcaption className="mt-3 text-sm text-neutral-400">
             Recommendation Letter — Attack Capital

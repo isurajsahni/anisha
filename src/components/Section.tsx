@@ -14,7 +14,7 @@ type SectionProps = PropsWithChildren<{
  */
 export function Section({ id, title, subtitle, children }: SectionProps): JSX.Element {
   return (
-    <section id={id} className="border-t border-white/5">
+    <section id={id} className="border-t border-white/5 scroll-mt-24 md:scroll-mt-28">
       <div className="mx-auto max-w-6xl px-4 py-16 md:py-24">
         {(title || subtitle) && (
           <div className="mb-10">
