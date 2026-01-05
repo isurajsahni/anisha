@@ -22,15 +22,15 @@ export default function App(): JSX.Element {
         <div className="mx-auto max-w-6xl px-4 py-3 flex items-center justify-between">
           <a href="#" className="font-semibold tracking-tight text-white">Anisha Kumari</a>
           <nav className="flex items-center gap-6 text-sm text-neutral-300">
-            <a className="hover:text-white" href="#about">About</a>
-            <a className="hover:text-white" href="#experience">Experience</a>
-            <a className="hover:text-white" href="#skills">Skills</a>
-            <a className="hover:text-white" href="#projects">Projects</a>
-            <a className="hover:text-white" href="#samples">Samples</a>
-            <a className="hover:text-white" href="#certificates">Certificates</a>
-            <a className="hover:text-white" href="#education">Education</a>
-            <a className="hover:text-white" href="#testimonials">Testimonials</a>
-            <a className="px-3 py-1.5 rounded-md bg-accent text-black font-medium hover:opacity-90 transition" href="#contact">Contact</a>
+            <a className="hover:text-white hover:underline underline-offset-4" href="#about">About</a>
+            <a className="hover:text-white hover:underline underline-offset-4" href="#experience">Experience</a>
+            <a className="hover:text-white hover:underline underline-offset-4" href="#skills">Skills</a>
+            <a className="hover:text-white hover:underline underline-offset-4" href="#projects">Projects</a>
+            <a className="hover:text-white hover:underline underline-offset-4" href="#samples">Samples</a>
+            <a className="hover:text-white hover:underline underline-offset-4" href="#certificates">Certificates</a>
+            <a className="hover:text-white hover:underline underline-offset-4" href="#education">Education</a>
+            <a className="hover:text-white hover:underline underline-offset-4" href="#testimonials">Testimonials</a>
+            <a className="px-3 py-1.5 rounded-md bg-accent text-black font-medium hover:opacity-90 transition btn-shine" href="#contact">Contact</a>
           </nav>
         </div>
       </header>

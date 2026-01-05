@@ -1,4 +1,5 @@
 import { Section } from './Section'
+import { motion } from 'framer-motion'
 
 /**
  * Displays experience roles.
@@ -56,8 +57,16 @@ export function Experience(): JSX.Element {
   return (
     <Section id="experience" subtitle="Experience" title="Where I’ve built impact">
       <div className="grid gap-4">
-        {roles.map((r) => (
-          <div key={r.company} className="rounded-xl border border-white/10 bg-white/5 p-5">
+        {roles.map((r, idx) => (
+          <motion.div
+            key={r.company}
+            className="rounded-xl border border-white/10 bg-white/5 p-5"
+            initial={{ opacity: 0, y: 10 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.2 }}
+            transition={{ delay: idx * 0.05 }}
+            whileHover={{ y: -3, scale: 1.005 }}
+          >
             <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-2">
               <div>
                 <div className="text-white font-semibold">{r.title}</div>
@@ -70,7 +79,7 @@ export function Experience(): JSX.Element {
                 <li key={p}>{p}</li>
               ))}
             </ul>
-          </div>
+          </motion.div>
         ))}
       </div>
     </Section>

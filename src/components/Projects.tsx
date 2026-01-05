@@ -52,6 +52,7 @@ export function Projects(): JSX.Element {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, amount: 0.2 }}
             transition={{ delay: idx * 0.08 }}
+            whileHover={{ y: -4, scale: 1.01 }}
           >
             {p.imgSrc && (
               <div className="aspect-[16/9] overflow-hidden rounded-t-xl border-b border-white/10">

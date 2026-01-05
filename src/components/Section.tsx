@@ -19,7 +19,18 @@ export function Section({ id, title, subtitle, children }: SectionProps): JSX.El
         {(title || subtitle) && (
           <div className="mb-10">
             {subtitle && <div className="text-sm uppercase tracking-widest text-accent mb-2">{subtitle}</div>}
-            {title && <h2 className="text-2xl md:text-3xl font-semibold text-white">{title}</h2>}
+            {title && (
+              <div>
+                <h2 className="text-2xl md:text-3xl font-semibold text-white">{title}</h2>
+                <motion.div
+                  className="h-0.5 w-16 bg-accent/80 rounded mt-3"
+                  initial={{ width: 0, opacity: 0 }}
+                  whileInView={{ width: 64, opacity: 1 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
+                />
+              </div>
+            )}
           </div>
         )}
         <motion.div

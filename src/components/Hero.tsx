@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion'
 import { useLightbox } from './Lightbox'
+import profileImg from '../img/anisha.jpg'
 
 /**
  * Hero section with headline and key stats.
@@ -61,14 +62,14 @@ export function Hero(): JSX.Element {
             <a href="#contact" className="px-5 py-2.5 rounded-md border border-white/10 hover:border-accent text-white transition">Contact</a>
           </div>
         </div>
-        <div className="hidden md:block">
-          <div className="relative mx-auto w-72 h-72 rounded-2xl overflow-hidden border border-white/10 shadow-glow">
+        <div>
+          <div className="relative mx-auto rounded-2xl overflow-hidden border border-white/10 shadow-glow">
             <img
-              src="/images/profile.svg"
+              src={profileImg}
               alt="Anisha Kumari"
-              className="w-full h-full object-cover cursor-zoom-in"
+              className="w-full h-auto object-cover cursor-zoom-in"
               loading="eager"
-              onClick={() => open({ src: '/images/profile.svg', alt: 'Anisha Kumari' })}
+              onClick={() => open({ src: profileImg, alt: 'Anisha Kumari' })}
             />
             <div className="absolute inset-0 ring-1 ring-white/10 rounded-2xl pointer-events-none"></div>
           </div>

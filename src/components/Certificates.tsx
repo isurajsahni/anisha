@@ -20,7 +20,7 @@ export function Certificates(): JSX.Element {
     <Section id="certificates" subtitle="Certificates" title="Certifications and recognition">
       <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-4">
         {certs.map((c) => (
-          <figure key={c.title} className="rounded-xl border border-white/10 bg-white/5 p-3">
+          <figure key={c.title} className="rounded-xl border border-white/10 bg-white/5 p-3 transition-transform hover:-translate-y-1 hover:shadow-glow">
             <div className="aspect-[4/3] overflow-hidden rounded-lg border border-white/10">
               <img
                 src={c.img}
