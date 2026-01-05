@@ -23,6 +23,13 @@ body {
   box-shadow: 0 0 0 2px rgba(255, 140, 0, 0.6);
 }
 
+@layer base {
+  img {
+    @apply w-full h-auto;
+    display: block;
+  }
+}
+
 /* Fun micro-interactions */
 @keyframes shine {
   0% { transform: translateX(-100%); }
